@@ -1,11 +1,8 @@
-BlockAdBlock (v3.2.1)
+Fork of BlockAdBlock (v3.2.1)
 ===========
-
-([FuckAdBlock](https://github.com/sitexw/FuckAdBlock) same project but with a more convenient name)
 
 You can detect nasty ad blockers.
 Online example: http://sitexw.fr/blockadblock/
-
 
 Valid on
 ---------------------
@@ -14,22 +11,6 @@ Valid on
 - Internet Explorer (8+)
 - Safari
 - Opera
-
-Install via
----------------------
-Manual:
-```
-Download "blockadblock.js" and add it to your website.
-```
-Bower:
-```
-bower install blockadblock
-```
-Node.js/io.js:
-```
-npm install blockadblock
-```
-
 
 Code example
 ---------------------
@@ -43,7 +24,7 @@ function adBlockDetected() {
 	alert('AdBlock is enabled');
 }
 
-// Recommended audit because AdBlock lock the file 'blockadblock.js' 
+// Recommended audit because AdBlock lock the file 'blockadblock.js'
 // If the file is not called, the variable does not exist 'blockAdBlock'
 // This means that AdBlock is present
 if(typeof blockAdBlock === 'undefined') {
@@ -147,3 +128,7 @@ myBlockAdBlock = new BlockAdBlock({
 	resetOnEnd: true
 });
 ```
+
+Extension
+---------------------
+This project was forked to provide an additional functionality - load url to some server and possibly detect on the fly changes to AdBlockers which might not change the dom injection configuration, resulting in the current checks to fail
